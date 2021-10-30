@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+      <meta charset="utf-8"/>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+      <link rel="stylesheet" href="style.css"/>
+      <link rel="javascript" href="index.js"/>
+      <title>La maison des secrets</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="consigne"> Consigne : Trouver le chat caché derrière les boutons en cliquant dessus</h1>
+    </header>
+    <ul>
+        <li>Cliquez sur ce premier bouton</li>
+        <li>Suivez les consignes qui appaissent</li>
+        <li>Si vous trouvez le chat vous avez gagné !</li>
+    </ul>
+    <div id="mon_div" class="milieu color"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+    <script>
+      est_bleu = false;
+      est_blanc = false;
+      document.getElementById("mon_div").onclick = function() {
+      if(est_bleu){
+          est_bleu = false;
+          est_blanc = true;
+          document.getElementById("mon_div").style.backgroundColor = "white"
+      }
+      else if(est_blanc){
+        est_bleu = false;
+        est_blanc = false;
+        document.getElementById("mon_div").style.backgroundColor = "red"
+
+      }   
+      else{
+          est_bleu = true;
+          document.getElementById("mon_div").style.backgroundColor = "blue"
+      }
+    }
+      </script>
+
+      <p>Quel est le drapeau que vous venez de voir ?</p>
+      <p>
+        <a id="button-france" class="btn btn-secondary" href="france.html" role="button">France</a>
+        <a id="button-finlande" class="btn btn-secondary" href="finlande.html" role="button">Finlande</a>
+        <a id="button-pays-bas" class="btn btn-secondary" href="pays-bas.html" role="button">Pays-Bas</a>
+      </p>
+        
+      <footer class="footer fixed-bottom text-center bg-dark">
+        <p class="text-white">C'est une page web realisée par Thomas et Ilona.</p>
+        <p class="text-white">Tout droit de reproduction est autorisé.</p>
+      </footer>    
+  </body>
+</html>
+
+<!-- <header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="marge navbar-brand" href="#">Maison</a>
+  </nav>
+</header>
+
+<div class="main container-fluid text-center ">
+  <div class="row">
+      <h1 class="display-1">Votre avis [n|v]ous intéresse</h1>
+  </div>
+  <div class="bas row align-items-center gx-6">
+      <div class="col">
+          <div class="choix border bg-light">
+              <p>donnez votre avis</p>
+              <p><a class="btn btn-primary" href="./donner.html" role="button">DONNER !</a></p>
+          </div>
+      </div>
+      <div class="col">
+          <div class="choix border bg-light">
+              <p>lisez des avis</p>
+              <p><a class="btn btn-danger" href="./lire.html" role="button">LIRE !</a></p>
+          </div>
+      </div>
+  </div>
+
+</div>
+
+<footer class="footer fixed-bottom text-center bg-dark">
+  <p class="text-white">Le site qui permet de donner son avis.</p>
+</footer> -->

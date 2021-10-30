@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <title>On teste des trucs</title>
+</head>
+
+<body>
+    <script> src = "test.js"</script>
+
+    <form id="Formulaire">
+        <div>
+            <label for="example">Veuillez saisir un texte</label>
+            <input id="text_a" type="text">
+        </div>
+        <button id="example" type="submit">Envoyer</button>
+    </form>
+
+    <script>
+        document.querySelector("#example").addEventListener("click", (event) => {
+            event.preventDefault();
+            var a = document.getElementById("text_a").value;
+            if (a == "vrai") {
+                window.location.replace('victoire.html');
+            }
+            else {
+                window.location.replace('finlande.html');
+            }
+        })
+    </script>
+</body>
+
+</html>

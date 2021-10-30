@@ -1,0 +1,1 @@
+document.getElementById("mon_div").style.backgroundColor = "blue";

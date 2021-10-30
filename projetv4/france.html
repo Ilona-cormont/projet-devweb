@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="javascript" href="index.js" />
+  <title>France</title>
+</head>
+
+<body>
+  <header class="page-header">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="marge navbar-brand" href="#">Test
+        <img src="images/test_header.png" alt="Logo manquant" width='50'>
+      </a>
+    </nav>
+  </header>
+
+  <div class="milieu">
+    <p>Bravo !</p>
+    <p>Voici la nouvelle énigme :) </p>
+    <p>Compléter la ligne manquante</p>
+    <p>1</p>
+    <p>11</p>
+    <p>21</p>
+    <p>1211</p>
+    <p>111221</p>
+  </div>
+
+  <form id="form_devinette">
+    <div>
+      <label for="reponse">Ma réponse: </label>
+      <input id="rep_devinette" type="text">
+    </div>
+    <button id="reponse" type="submit">Envoyer</button>
+  </form>
+
+  <!-- <div id="exampleModalLive" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLiveLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLiveLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Woohoo, you're reading this text in a modal!</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bd-example">
+    <button id="indice" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLive">
+      Voir un indice
+    </button>
+  </div> -->
+
+  <!-- <button id="indice" type="submit">Voir un indice</button> -->
+  <button id="retour" type="submit">Retour</button>
+
+  <script>
+    document.querySelector("#reponse").addEventListener("click", (event) => {
+      event.preventDefault();
+      var a = document.getElementById("rep_devinette").value;
+      if (a == "312211") {
+        window.location.replace('victoire.html');
+      }
+      else {
+        window.location.replace('finlande.html');
+      }
+    })
+    document.querySelector("#retour").addEventListener("click", (event) => {
+      window.location.replace('index.html');
+      event.preventDefault();
+    })
+
+    // var exampleModalLive = new bootstrap.Modal(document.getElementById('exampleModalLive'), options)
+    
+  </script>
+
+  <footer class="footer fixed-bottom text-center bg-dark">
+    <p class="text-white">C'est une page web realisée par Thomas et Ilona.</p>
+    <p class="text-white">Tout droit de reproduction est autorisé.</p>
+  </footer>
+</body>
+
+</html>
